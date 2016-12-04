@@ -1,0 +1,14 @@
+{
+  "name": "thinktrans",
+  "version": "0.1.0",
+  "private": false,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "moment": "^2.15.2",
+    "thinky": "^2.3.8",
+    "uuid": "^2.0.3"
+  }
+}
