@@ -42,6 +42,7 @@ ThinkTransaction.begin({timeout: 30})
 ### Insert
 
 ```javascript
+//returns a promise
 trans.op.insert({
     Profile : { // Profile is name of your collection in rethinkdb database
       id : uuid.v4(), //REQUIRED : You will need to explicity pass id value along with other attributes of the document
@@ -55,6 +56,7 @@ trans.op.insert({
 ### Update
 
 ```javascript
+//returns a promise
 trans.op.update({
     Profile : { //Profile is name of your collection in rethinkdb database
       set :{lastName:  "Kennedy"}, //By design, You could set any property of the document, including properties with deep structures.
@@ -71,6 +73,7 @@ trans.op.update({
 
 
 ```javascript
+//returns a promise
 trans.op.delete({
     Profile : {
       where : {firstName : "John", lastName:  "Kennedy", type : "User"} //This could be any js object you may pass to rethinkdb
@@ -114,15 +117,13 @@ for the complete working code and additional examples. These examples are using 
 You are welcome to do a pull request
 
 # Roadmap
-> Implement backend job that monitors the ReThinkDB database connection, and fails the transactions immediately when connection is lost.
-  ``` javascript
+* Implement backend job that monitors the ReThinkDB database connection, and fails the transactions immediately when connection is lost.
   r.getPoolMaster().on('healthy', function(healthy) {
-  if (healthy === true) {}
   });
-  ``` 
-> Side-by-side plug and play with [sequelize](https://github.com/sequelize/sequelize) SQL ORM library to support transactions cross living between SQL database like MySQL and RethinkDB.
-> Support user friendly errors, currently it rethrows upstream errors AS IS
-> And, ofcourse Issues/feedback coming from [Issue register](https://github.com/jaladankisuresh/thinktrans/issues)
+* Side-by-side plug and play with [sequelize](https://github.com/sequelize/sequelize) SQL ORM library to support transactions cross living between SQL database like MySQL and RethinkDB.
+* Support user friendly errors, currently it rethrows upstream errors AS IS
+* And, ofcourse Issues/feedback coming from GitHub Issues 
+https://github.com/jaladankisuresh/thinktrans/issues
 
 # License
 open sourced with [MIT](./License.md) license
