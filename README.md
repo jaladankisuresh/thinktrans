@@ -114,7 +114,7 @@ Promise.all([
 for the complete working code and additional examples. These examples are using [bluebird](https://github.com/petkaantonov/bluebird) and [thinky](https://github.com/neumino/thinky) libraries. You may also choose to use rethinkdbdash, but make sure you change the references in the library to allow this library to reuse the same connection pool. 
 
 # Contribute
-You are welcome to do a pull request
+You are welcome to do a pull request. It would greatly help this module if it could find more contributors to build it and test it.
 
 # Roadmap
 * Implement backend job that monitors the ReThinkDB database connection, and fails the transactions immediately when connection is lost.
@@ -127,4 +127,6 @@ https://github.com/jaladankisuresh/thinktrans/issues
 
 # License
 open sourced with [MIT](./License.md) license
+
+NOTE : THIS LIBRARY MAY NOT BE PRODUCTION READY YET. SOFTWARE IS PROVIDED 'AS IS', WITHOUT ANY WARRANTY.
 
