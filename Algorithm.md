@@ -105,9 +105,8 @@ Transient Stage:
 
 *To make it little interesting lets assume we have 2 concurrent transactions trying to update the same John's document*
 
-trans 1: 66da6196-a955-4a1e-b851-ca49fe01b6c8 - Gets the write lock being the TOP item in the queue
-
-trans 2: 045d965d-47a8-4cac-9188-4fc240e25a6f - waitlisted until trans 1 is completed
+- trans 1: 66da6196-a955-4a1e-b851-ca49fe01b6c8 - Gets the write lock being the TOP item in the queue.
+- trans 2: 045d965d-47a8-4cac-9188-4fc240e25a6f - waitlisted until trans 1 is completed.
 
 Timestamp A
 ```javascript
