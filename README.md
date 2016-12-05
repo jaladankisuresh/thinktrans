@@ -113,6 +113,13 @@ Promise.all([
 #### [More Examples Here](./examples)
 for the complete working code and additional examples. These examples are using [bluebird](https://github.com/petkaantonov/bluebird) and [thinky](https://github.com/neumino/thinky) libraries. You may also choose to use rethinkdbdash, but make sure you change the references in the library to allow this library to reuse the same connection pool. 
 
+# Ok, How does it work?
+**thinktrans** makes some opinions on how it should respond to any INSERT, UPDATE and DELETE operations, LIKE
+
+1. Checking for duplicates while INSERT
+2. Checking the state of the document after its acquires write lock for UPDATE or DELETE, with the state the document had been when the transaction kicked-off. Any changes to the document affecting its WHERE criteria or SET criteria will cause the transaction to fail.
+Find more on its execution theory [here](./Algorithm.md)
+
 # Contribute
 You are welcome to do a pull request. It would greatly help this module if it could find more contributors to build it and test it.
 
