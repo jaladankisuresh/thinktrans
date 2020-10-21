@@ -269,7 +269,7 @@ Transient Stage
 			"new_val": null
 			},
 			"state": "applied",
-			"type": "add",
+			"type": "delete",
 			"created":  "2016-11-23T09:52:26.645Z",
 			"transactionId" :"d49076b2-3423-4d15-af50-6ceb8a53ceab"
 		}
